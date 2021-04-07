@@ -13,10 +13,10 @@ const { getCategorias,
 router.get('/', indexRoute);
 
 // End point categorias
-router.get('/categoria'    ,   getCategorias);
-router.get('/categoria/:id'    ,   getCategoriasById);
-router.post('/categoria'   ,   createCategoria);
-router.put('/categoria/:id'    ,   updateCategoria);
+router.get('/categoria'         ,   getCategorias);
+router.get('/categoria/:id'     ,   getCategoriasById);
+router.post('/categoria'        ,   createCategoria);
+router.put('/categoria/:id'     ,   updateCategoria);
 router.delete('/categoria/:id'  ,   deleteCategoria);
 
 module.exports = {

@@ -1,8 +1,11 @@
+require('dotenv').config();
 const { app } = require('./app');
 const { createConnection } = require('./models/database');
-const PORT = 3000;
+const { dbConnection } = require('./models/config');
 
+const PORT = process.env.PORT;
 
+dbConnection();
 createConnection();
 
 app.listen(PORT, () => {

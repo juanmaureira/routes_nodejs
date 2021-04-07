@@ -3,6 +3,14 @@ const router = Router();
 
 const { indexRoute } = require('../controllers/index');
 
+const { 
+        getUsers,
+        getUserById,
+        createUser,
+        updateUsers,
+        deleteUser
+                     } = require('../controllers/users');
+
 const { getCategorias,
         getCategoriasById,
         createCategoria,
@@ -11,6 +19,12 @@ const { getCategorias,
                         } = require('../controllers/categorias');
 
 router.get('/', indexRoute);
+
+router.get('/users', getUsers);
+router.get('/users/:id', getUserById);
+router.post('/users', createUser);
+router.put('/users/:id', updateUsers);
+router.delete('/users/:id', deleteUser);
 
 // End point categorias
 router.get('/categoria'         ,   getCategorias);
